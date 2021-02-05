@@ -232,15 +232,15 @@
 // - Відтворити роботу годинника, відрахувавши  2 години 20 хвилини (3 цикли! 1й - години, 2й - хвилини, 3й - секунди)
 
 
-// for (let h = 0; h <= 2; h++) {
-//     for (let m = 0; m < 60; m++) {
-         
-//         for (let s = 0; s < 60; s++) {
+for (let h = 0; h <= 2; h++) {
+    for (let m = 0; m < 60; m++) {
+         if (h === 2 && m === 21) break
+        for (let s = 0; s < 60; s++) {
             
-//             document.write((`Hour: ${h}, Min: ${m}, Sec: ${s} <br>`))
-//                 if(h===2 && m===20 && sec===0) break 
-//         } 
+            document.write((`Hour: ${h}, Min: ${m}, Sec: ${s} <br>`))
+                if (m === 20 && s === 0) break
+        } 
         
-//     }
+    }
     
-// }
+}
