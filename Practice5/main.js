@@ -4,7 +4,7 @@ function update() {
    fetch('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
        .then(response => response.json())
        .then(courses => {
-           //======================================================
+           
            let coursesNamesArr = ['#usd-uah', '#euro-uah', '#rur-uah', '#btc-usd']
            let buyIdNamesArr = ['#buy-usd', '#buy-euro', '#buy-rur', '#buy-btc']
            let saleIdNamesArr = ['#sale-usd', '#sale-eur', '#sale-rur', '#sale-btc']
