@@ -1,0 +1,115 @@
+ [
+        {
+            "Brand": "Accelera",
+            "Model": "Beta",
+            "Size": "195/70 R14 91H",
+            "Year": "2017",
+            "Quantity": "8",
+            "Price": "1000",
+            "img": "tyre/335.jpg"
+        },
+        {
+            "Brand": "Accelera",
+            "Model": "Iota",
+            "Size": "275/45 ZR19 108W XL",
+            "Year": "2020",
+            "XL": "XL",
+            "Quantity": "20",
+            "Price": "2226",
+            "img": "tyre/337.jpg"
+        },
+        {
+            "Brand": "Accelera",
+            "Model": "Iota",
+            "Size": "295/35 ZR21 107Y XL",
+            "Year": "2021",
+            "XL": "XL",
+            "Quantity": "23",
+            "Price": "2862",
+            "img": "tyre/337.jpg"
+        },
+        {
+            "Brand": "Accelera",
+            "Model": "Iota ST-68",
+            "Size": "275/45 R21 110W XL",
+            "XL": "XL",
+            "Quantity": "8",
+            "Price": "2516",
+            "img": "tyre/7318.jpg"
+        },
+        {
+            "Brand": "Achilles",
+            "Model": "122",
+            "Size": "155/70 R13 75T",
+            "Quantity": "20",
+            "Price": "725",
+            "img": "tyre/341.jpg"
+        },
+        {
+            "Brand": "Achilles",
+            "Model": "122",
+            "Size": "155/80 R13 79T",
+            "Year": "2018",
+            "Quantity": "20",
+            "Price": "793",
+            "img": "tyre/341.jpg"
+        },
+        {
+            "Brand": "Achilles",
+            "Model": "122",
+            "Size": "165/70 R13 79H",
+            "Quantity": "20",
+            "Price": "807",
+            "img": "tyre/341.jpg"
+        },
+        {
+            "Brand": "Achilles",
+            "Model": "122",
+            "Size": "165/80 R13 83T",
+            "Quantity": "8",
+            "Price": "1024",
+            "img": "tyre/341.jpg"
+        },
+        {
+            "Brand": "Achilles",
+            "Model": "122",
+            "Size": "175/65 R14 82H",
+            "Quantity": "20",
+            "Price": "863",
+            "img": "tyre/341.jpg"
+        },
+        {
+            "Brand": "Achilles",
+            "Model": "122",
+            "Size": "175/65 R15 84T",
+            "Year": "2018",
+            "Quantity": "20",
+            "Price": "926",
+            "img": "tyre/341.jpg"
+        },
+        {
+            "Brand": "Achilles",
+            "Model": "122",
+            "Size": "175/70 R13 82H",
+            "Year": "2018",
+            "Quantity": "20",
+            "Price": "785",
+            "img": "tyre/341.jpg"
+        },
+        {
+            "Brand": "Achilles",
+            "Model": "122",
+            "Size": "175/70 R14 84H",
+            "Quantity": "10",
+            "Price": "911",
+            "img": "tyre/341.jpg"
+        },
+        {
+            "Brand": "Achilles",
+            "Model": "122",
+            "Size": "185/60 R14 82H",
+            "Quantity": "20",
+            "Price": "909",
+            "img": "tyre/341.jpg"
+        }
+    ]
