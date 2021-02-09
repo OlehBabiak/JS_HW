@@ -1,0 +1,19 @@
+.img{
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.items {
+    border: 2px solid black;
+    width: 50%;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
