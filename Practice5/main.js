@@ -6,9 +6,15 @@ function update() {
        .then(courses => {
            //======================================================
            let coursesNamesArr = ['#usd-uah', '#euro-uah', '#rur-uah', '#btc-usd']
+           let buyIdNamesArr = ['#buy-usd', '#buy-euro', '#buy-rur', '#buy-btc']
+           let saleIdNamesArr = ['#sale-usd', '#sale-eur', '#sale-rur', '#sale-btc']
            for (let i = 0; i < courses.length; i++) {
                let courseName = document.querySelector(coursesNamesArr[i])
                courseName.innerHTML = `${courses[i].ccy}/${courses[i].base_ccy}`
+               let buyCourse = document.querySelector(buyIdNamesArr[i])
+               buyCourse.innerHTML = `${parseFloat(courses[i].buy).toFixed(2)}`
+               let saleCourse = document.querySelector(saleIdNamesArr[i])
+               saleCourse.innerHTML = `${parseFloat(courses[i].sale).toFixed(2)}`
            }
            //======================================================
 
@@ -20,13 +26,7 @@ function update() {
            //   rurUah.innerHTML = `${courses[2].ccy}/${courses[2].base_ccy}`
            //  let btcUsd = document.querySelector('#btc-usd')
            //  btcUsd.innerHTML = `${courses[3].ccy}/${courses[3].base_ccy}`
-           //=====================================
-           let buyIdNamesArr = ['#buy-usd', '#buy-euro', '#buy-rur', '#buy-btc']
-
-           for (let i = 0; i < courses.length; i++) {
-               let buyCourse = document.querySelector(buyIdNamesArr[i])
-               buyCourse.innerHTML = `${parseFloat(courses[i].buy).toFixed(2)}`
-           }
+         
            //=================================================================
 
            //  let buyUsd = document.querySelector('#buy-usd')
@@ -38,13 +38,7 @@ function update() {
            //  let buyBtc = document.querySelector('#buy-btc')
            //  buyBtc.innerHTML = `${parseFloat(courses[3].buy).toFixed(2)}`
 
-           //========================================================
-           let saleIdNamesArr = ['#sale-usd', '#sale-eur', '#sale-rur', '#sale-btc']
-
-           for (let i = 0; i < courses.length; i++) {
-               let saleCourse = document.querySelector(saleIdNamesArr[i])
-               saleCourse.innerHTML = `${parseFloat(courses[i].sale).toFixed(2)}`
-           }
+        
            //==================================================================
            //  let saleUsd = document.querySelector('#sale-usd')
            //  saleUsd.innerHTML = `${parseFloat(courses[0].sale).toFixed(2)}`
@@ -58,6 +52,6 @@ function update() {
 
        });
 }
-
- elem.onclick = update
+update()
+elem.onclick = update
 
