@@ -1,0 +1,17 @@
+.user {
+    background: cadetblue;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.user-prop {
+    background: cornflowerblue;
+    border: 1px solid black;
+    margin: 2px;
+}
+
+.user-adress {
+    background: yellow;
+    border: 1px solid black;
+    margin: 2px;
+}
