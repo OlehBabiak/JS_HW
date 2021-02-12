@@ -1,0 +1,17 @@
+.userContentDiv {
+    background: cadetblue;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.innerContent {
+    background: cyan;
+    border: 1px solid black;
+    margin: 3px;
+}
+
+.geo {
+    background: darkgoldenrod;
+    border: 1px solid black;
+    margin: 3px;
+}

@@ -712,39 +712,39 @@
 //- За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement,
 // розділивши всі властивості по своїм блокам , блок з адресою зробити окремим блоком, з блоками для кожної властивості
 
-// for (const user of users) {
+for (const user of users) {
 
-//     let userDiv = document.createElement('div')
-//     let name = document.createElement('p')
-//     name.innerText = `name: ${user.name}`
-//     name.classList.add('user-prop')
-//     userDiv.appendChild(name)
+    let userDiv = document.createElement('div')
+    let name = document.createElement('p')
+    name.innerText = `name: ${user.name}`
+    name.classList.add('user-prop')
+    userDiv.appendChild(name)
 
-//     let age = document.createElement('p')
-//     age.innerText = `age: ${user.age}`
-//     age.classList.add('user-prop')
-//     userDiv.appendChild(age)
+    let age = document.createElement('p')
+    age.innerText = `age: ${user.age}`
+    age.classList.add('user-prop')
+    userDiv.appendChild(age)
 
-//     let status = document.createElement('p')
-//     status.innerText = `status: ${user.status}`
-//     status.classList.add('user-prop')
-//     userDiv.appendChild(status)
-//     //-------------------------
-//     let userAdress = document.createElement('p');
+    let status = document.createElement('p')
+    status.innerText = `status: ${user.status}`
+    status.classList.add('user-prop')
+    userDiv.appendChild(status)
+    //-------------------------
+    let userAdress = document.createElement('p');
 
-//     userAdress.classList.add('user-adress')
-//     userDiv.appendChild(userAdress);
+    userAdress.classList.add('user-adress')
+    userDiv.appendChild(userAdress);
 
-//     for (let key in user.address) {
-//         let city = document.createElement('p');
+    for (let key in user.address) {
+        let city = document.createElement('p');
 
-//         city.innerText = `${key}: ${user.address[key]}`;
-//         city.classList.add('user-prop-city');
-//         userAdress.appendChild(city);
-//         console.log(key)
-//     }
+        city.innerText = `${key}: ${user.address[key]}`;
+        city.classList.add('user-prop-city');
+        userAdress.appendChild(city);
+        console.log(key)
+    }
 
-//     userDiv.classList.add('user')
-//     document.body.appendChild(userDiv)
+    userDiv.classList.add('user')
+    document.body.appendChild(userDiv)
 
-// }
+}
