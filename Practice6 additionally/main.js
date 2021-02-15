@@ -107,33 +107,45 @@
 //     * за допомогою fetch(як в прикладі) отримати від jsonplaceholder всі comments.За допомогою document.createElement вивести їх 
 //в браузер.Помістити кожен окремий об 'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в свій блок(блок в блоці). **
 //     ** ** при помощи fetch(как в примере) получить от jsonplaceholder все posts.Внутри последнего then() сделать еще один fetch 
-//который сделает запрос и получит все comments.Объеденить соответсвующий post с соответсвующими comment и вывести в браузер.
-//Подсказка: в каждом comment есть поле postId которое определяет какой комментарий принадлежит какому посту
+// который сделает запрос и получит все comments.Объеденить соответсвующий post с соответсвующими comment и вывести в браузер.
+// Подсказка: в каждом comment есть поле postId которое определяет какой комментарий принадлежит какому посту
 
 
-fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(response => response.json())
-    .then(posts => {
-        for (const post of posts) {
-            let postDiv = document.createElement('div')
-                for (const key in post) {
-                    let postDivContent = document.createElement('div')
-                    postDivContent.innerHTML = `${key}: ${post[key]}`
-                    postDivContent.classList.add('postDivContent')
-                    postDiv.appendChild(postDivContent)
-                }
-            postDiv.classList.add('postDiv')
-            document.body.appendChild(postDiv) 
-        }
+
+   
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => response.json())
+        .then(posts => {
             
-            fetch('https://jsonplaceholder.typicode.com/comments')
-            .then(response => response.json())
-            .then(comments => {
-                for (const comment of comments) {
-                
-                postDiv.appendChild(comment)
-            }
+                fetch('https://jsonplaceholder.typicode.com/comments')
+                .then(response => response.json())
+                .then(comments => {
+                    for (const post of posts) {
+                        let postDiv = document.createElement('div')
+                        for (const key in post) {
+                            let postDivContent = document.createElement('div')
+                            postDivContent.innerHTML = `${key}: ${post[key]}`
+                            postDivContent.classList.add('postDivContent')
+                            postDiv.appendChild(postDivContent)
+                                         }
+                            for (const comment of comments) {
+                                if (post.id === comment.postId) {
+                                    for (const commKey in comment) {
+                                       let commentDiv = document.createElement('div')
+                                       commentDiv.innerText = `${commKey}: ${comment[commKey]}`
+                                       postDiv.appendChild(commentDiv)
+                                            
+                                        }
+                                    }
+                                    
+                                }
+                            
+                        postDiv.classList.add('postDiv')
+                        document.body.appendChild(postDiv) 
+
+                    }
+                })
+
+
         })
 
-
-    })
