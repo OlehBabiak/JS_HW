@@ -1,10 +1,10 @@
-.userContentDiv {
+.userContentDiv, .postDiv{
     background: cadetblue;
     border: 1px solid black;
     margin: 5px;
 }
 
-.innerContent {
+.innerContent, .postDivContent {
     background: cyan;
     border: 1px solid black;
     margin: 3px;
