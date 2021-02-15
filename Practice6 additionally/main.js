@@ -113,39 +113,49 @@
 
 
    
-    fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(response => response.json())
-        .then(posts => {
-            
+
+        fetch('https://jsonplaceholder.typicode.com/posts')
+            .then(response => response.json())
+            .then(posts => {
+
                 fetch('https://jsonplaceholder.typicode.com/comments')
-                .then(response => response.json())
-                .then(comments => {
-                    for (const post of posts) {
-                        let postDiv = document.createElement('div')
-                        for (const key in post) {
-                            let postDivContent = document.createElement('div')
-                            postDivContent.innerHTML = `${key}: ${post[key]}`
-                            postDivContent.classList.add('postDivContent')
-                            postDiv.appendChild(postDivContent)
-                                         }
+                    .then(response => response.json())
+                    .then(comments => {
+                        for (const post of posts) {
+                            let postDiv = document.createElement('div')
+                            for (const key in post) {
+                                let postDivContent = document.createElement('div')
+                                postDivContent.innerHTML = `${key}: ${post[key]}`
+                                postDivContent.classList.add('postDivContent')
+                                postDiv.appendChild(postDivContent)
+                            }
                             for (const comment of comments) {
                                 if (post.id === comment.postId) {
+                                    //--------------------------
+                                let comDiv = document.createElement('div')
+
                                     for (const commKey in comment) {
-                                       let commentDiv = document.createElement('div')
-                                       commentDiv.innerText = `${commKey}: ${comment[commKey]}`
-                                       postDiv.appendChild(commentDiv)
-                                            
-                                        }
+                                        let commentDiv = document.createElement('div')
+                                        commentDiv.innerText = `${commKey}: ${comment[commKey]}`
+                                        comDiv.appendChild(commentDiv)
+
                                     }
-                                    
+                                    comDiv.classList.add('comDiv')
+                                    postDiv.appendChild(comDiv)
+
+
+                                    //-----------------------------------
                                 }
-                            
-                        postDiv.classList.add('postDiv')
-                        document.body.appendChild(postDiv) 
 
-                    }
-                })
+                            }
+
+                            postDiv.classList.add('postDiv')
+                            document.body.appendChild(postDiv)
+
+                        }
+                    })
 
 
-        })
+            })
+
 

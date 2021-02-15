@@ -10,7 +10,7 @@
     margin: 3px;
 }
 
-.geo {
+.geo, .comDiv{
     background: darkgoldenrod;
     border: 1px solid black;
     margin: 3px;
