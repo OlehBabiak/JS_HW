@@ -429,136 +429,156 @@
 // Для кожного автомобіля створити свій блок, та додати його в елемент, індентифікатор якого ви отримали.
 // Для кожної властивості створити всередені блока автомоблія свій блок
 
-let cars = [{
-        id: 111,
-        model: 'A200',
-        producer: 'Mercedes',
-        tankVolume: 60,
-        horsePower: 280,
-        image: '../Practice3/imgs/2018_Mercedes-Benz_A200_AMG_Line_Premium+_1.3_Front.jpg'
-    },
+// let cars = [{
+//         id: 111,
+//         model: 'A200',
+//         producer: 'Mercedes',
+//         tankVolume: 60,
+//         horsePower: 280,
+//         image: '../Practice3/imgs/2018_Mercedes-Benz_A200_AMG_Line_Premium+_1.3_Front.jpg'
+//     },
 
-    {
-        id: 222,
-        model: 'Fusion',
-        producer: 'Ford',
-        tankVolume: 62,
-        horsePower: 240,
-        image: '../Practice3/imgs/2019_Ford_Fusion_SEL_1.5L,_front_9.8.19.jpg'
-    },
+//     {
+//         id: 222,
+//         model: 'Fusion',
+//         producer: 'Ford',
+//         tankVolume: 62,
+//         horsePower: 240,
+//         image: '../Practice3/imgs/2019_Ford_Fusion_SEL_1.5L,_front_9.8.19.jpg'
+//     },
 
-    {
-        id: 333,
-        model: 'A6',
-        producer: 'Audi',
-        tankVolume: 65,
-        horsePower: 220,
-        image: '../Practice3/imgs/audi-a6-avant-tfsie-quattro-2020.jpg'
-    },
+//     {
+//         id: 333,
+//         model: 'A6',
+//         producer: 'Audi',
+//         tankVolume: 65,
+//         horsePower: 220,
+//         image: '../Practice3/imgs/audi-a6-avant-tfsie-quattro-2020.jpg'
+//     },
 
-    {
-        id: 444,
-        model: 'Sonata',
-        producer: 'Hyundai',
-        tankVolume: 60,
-        horsePower: 160,
-        image: '../Practice3/imgs/hyundai-550x300.jpg'
-    },
+//     {
+//         id: 444,
+//         model: 'Sonata',
+//         producer: 'Hyundai',
+//         tankVolume: 60,
+//         horsePower: 160,
+//         image: '../Practice3/imgs/hyundai-550x300.jpg'
+//     },
 
-    {
-        id: 555,
-        model: 'Optima',
-        producer: 'KIA',
-        tankVolume: 58,
-        horsePower: 175,
-        image: '../Practice3/imgs/kia_optima.jpg'
-    },
+//     {
+//         id: 555,
+//         model: 'Optima',
+//         producer: 'KIA',
+//         tankVolume: 58,
+//         horsePower: 175,
+//         image: '../Practice3/imgs/kia_optima.jpg'
+//     },
 
-    {
-        id: 666,
-        model: 'Accord',
-        producer: 'Honda',
-        tankVolume: 64,
-        horsePower: 180,
-        image: '../Practice3/imgs/maxresdefault.jpg'
-    },
+//     {
+//         id: 666,
+//         model: 'Accord',
+//         producer: 'Honda',
+//         tankVolume: 64,
+//         horsePower: 180,
+//         image: '../Practice3/imgs/maxresdefault.jpg'
+//     },
 
-    {
-        id: 777,
-        model: '6',
-        producer: 'Mazda',
-        tankVolume: 64,
-        horsePower: 180,
-        image: '../Practice3/imgs/mazda-6-front2.jpg'
-    },
+//     {
+//         id: 777,
+//         model: '6',
+//         producer: 'Mazda',
+//         tankVolume: 64,
+//         horsePower: 180,
+//         image: '../Practice3/imgs/mazda-6-front2.jpg'
+//     },
 
-    {
-        id: 888,
-        model: 'Talisman',
-        producer: 'Renault',
-        tankVolume: 58,
-        horsePower: 130,
-        image: '../Practice3/imgs/renault-talisman-lead-image.jpg'
-    },
+//     {
+//         id: 888,
+//         model: 'Talisman',
+//         producer: 'Renault',
+//         tankVolume: 58,
+//         horsePower: 130,
+//         image: '../Practice3/imgs/renault-talisman-lead-image.jpg'
+//     },
 
-    {
-        id: 999,
-        model: 'C5',
-        producer: 'Citroen',
-        tankVolume: 55,
-        horsePower: 160,
-        image: '../Practice3/imgs/unnamed.jpg'
-    },
+//     {
+//         id: 999,
+//         model: 'C5',
+//         producer: 'Citroen',
+//         tankVolume: 55,
+//         horsePower: 160,
+//         image: '../Practice3/imgs/unnamed.jpg'
+//     },
 
-    {
-        id: 1212,
-        model: 'Impreza',
-        producer: 'Subaru',
-        tankVolume: 58,
-        horsePower: 270,
-        image: '../Practice3/imgs/завантаження.jpg'
-    }
-]
+//     {
+//         id: 1212,
+//         model: 'Impreza',
+//         producer: 'Subaru',
+//         tankVolume: 58,
+//         horsePower: 270,
+//         image: '../Practice3/imgs/завантаження.jpg'
+//     }
+// ]
 
-function addCars(cars, carElement, typeOfelement1, typeOfelement2, typeOfelement3) {
+// function addCars(cars, carElement, typeOfelement1, typeOfelement2, typeOfelement3) {
     
-    for (const car of cars) {
-        let carDiv = document.createElement(carElement)
+//     for (const car of cars) {
+//         let carDiv = document.createElement(carElement)
           
-             let producer = document.createElement(typeOfelement1)
-             producer.innerText = car.producer
-             carDiv.appendChild(producer)
+//              let producer = document.createElement(typeOfelement1)
+//              producer.innerText = car.producer
+//              carDiv.appendChild(producer)
     
-             let model = document.createElement(typeOfelement2)
-             model.innerText = car.model
-             carDiv.appendChild(model)
+//              let model = document.createElement(typeOfelement2)
+//              model.innerText = car.model
+//              carDiv.appendChild(model)
     
     
     
-             let tankVol = document.createElement(typeOfelement3)
-             tankVol.innerText = car.tankVolume
-             carDiv.appendChild(tankVol)
+//              let tankVol = document.createElement(typeOfelement3)
+//              tankVol.innerText = car.tankVolume
+//              carDiv.appendChild(tankVol)
     
-             let horsePow = document.createElement(typeOfelement3)
-             horsePow.innerText = car.horsePower
-             carDiv.appendChild(horsePow)
+//              let horsePow = document.createElement(typeOfelement3)
+//              horsePow.innerText = car.horsePower
+//              carDiv.appendChild(horsePow)
     
-          document.body.appendChild(carDiv)
-    }
+//           document.body.appendChild(carDiv)
+//     }
     
-}
-addCars(cars, 'div', 'h1', 'h2', 'p')
+// }
+// addCars(cars, 'div', 'h1', 'h2', 'p')
 
-
+//=============================================================
 
 // (на основі минулого ДЗ)
 // **- функція приймає 2 масиви з рівною кількістю об'єктів та з'єднює в один об'єкт користувача та місто з відповідними "id" та "user_id",
 // та повертає масив цих з'єднаних об'єктів.
 // Приклад масивів:
-//             let usersWithId = [{id: 1, name: 'vasya', age: 31, status: false}, {id: 2, name: 'petya', age: 30, status: true}, {id: 3, name: 'kolya', age: 29, status: true}, {id: 4, name: 'olya', age: 28, status: false},];
-//             let citiesWithId = [{user_id: 3, country: 'USA', city: 'Portland'}, {user_id: 1, country: 'Ukraine', city: 'Ternopil'}, {user_id: 2, country: 'Poland', city: 'Krakow'}, {user_id: 4, country: 'USA', city: 'Miami'},];
-// Частковий приклад реультату:
+//             let usersWithId = 
+// [{id: 1, name: 'vasya', age: 31, status: false}, 
+// {id: 2, name: 'petya', age: 30, status: true}, 
+// {id: 3, name: 'kolya', age: 29, status: true}, 
+// {id: 4, name: 'olya', age: 28, status: false},];
+//             let citiesWithId = 
+// [{user_id: 3, country: 'USA', city: 'Portland'}, 
+// {user_id: 1, country: 'Ukraine', city: 'Ternopil'}, 
+// {user_id: 2, country: 'Poland', city: 'Krakow'}, 
+// {user_id: 4, country: 'USA', city: 'Miami'},];
 
+
+// let addUserWithSity = function (arg1, arg2) {
+//     for (const user of usersWithId) {
+//         for (const city of citiesWithId) {
+//             if (user.id === city.user_id) {
+//                 user.country = city.country
+//                 user.city = city.city
+//             }
+//         }
+//     }
+//     return usersWithId
+// }
+// console.log(addUserWithSity(usersWithId, citiesWithId));
 
 
 // ***- беремо завдання з правилами з укроку №3 :
