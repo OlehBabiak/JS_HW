@@ -15,3 +15,16 @@
     border: 1px solid black;
     margin: 3px;
 }
+
+.button {
+    background-color: darkgray;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+     
+.comDivNone {
+    display: none;
+}

@@ -133,16 +133,19 @@
                                 if (post.id === comment.postId) {
                                     //--------------------------
                                 let comDiv = document.createElement('div')
-
+                               
                                     for (const commKey in comment) {
                                         let commentDiv = document.createElement('div')
                                         commentDiv.innerText = `${commKey}: ${comment[commKey]}`
                                         comDiv.appendChild(commentDiv)
-
+                                        
                                     }
-                                    comDiv.classList.add('comDiv')
-                                    postDiv.appendChild(comDiv)
+                                    
 
+                                comDiv.classList.add('comDiv')
+                                postDiv.appendChild(comDiv)
+                                    
+                                    
 
                                     //-----------------------------------
                                 }
@@ -155,7 +158,6 @@
                         }
                     })
 
-
+  
             })
-
 
