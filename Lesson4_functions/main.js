@@ -658,11 +658,11 @@ rulesfunc(rules)
 // Вирівняти багаторівневий масив в однорівневий
 // [1,3, ['Hello, 'Wordd', [9,6,1]], ['oops'], 9] -> [1, 3, 'Hello, 'Wordd', 9, 6, 1, 'oops', 9]
 
-let arr = [1, 3, ['Hello', 'Wordd', [9,6,1]], ['oops'], 9]
+// let arr = [1, 3, ['Hello', 'Wordd', [9,6,1]], ['oops'], 9]
 
-	function someFunc(arr) {
-		let newArr = arr.flat(3)
-		return newArr
-	}
-	console.log(someFunc(arr));
+	// function someFunc(arr) {
+	// 	let newArr = arr.flat(3)
+	// 	return newArr
+	// }
+	// console.log(someFunc(arr));
 
