@@ -268,57 +268,60 @@
 //     --за допоиоги циклу знайти яка попелюшка повинна бути з принцом ===
 //    
 
-// let cindarellas = []
+class Human {
+    constructor(name, age){
+        this.name = name;
+        this.age = age
+    }
+}
+
+
+class Cinderella extends Human{
+    constructor(name, age, footSize){
+        super(name, age)
+        this.name = name;
+        this.age = age;
+        this.footSize = footSize
+    }
+}
+
+class Prince extends Human{
+    constructor(name, age, slipperSize){
+        super(name, age)
+        this.name = name;
+        this.age = age;
+        this.slipperSize = slipperSize
+
+    }
+    choiceCindarella(girls) {
+        for (const cindarella of cindarellas) {
+
+            if (cindarella.footSize === alfonso.slipperSize) {
+                console.log(`My sindarella is ${cindarella.name}`);
+            }
+        }
+    }
+}
+
+let cindarellas = [
+    new Cinderella('Anja', 25, 39),
+    new Cinderella('Olja', 22, 38),
+    new Cinderella('Nastja', 21, 38),
+    new Cinderella('Ira', 18, 40),
+    new Cinderella('Oksana', 23, 36),
+    new Cinderella('Nadja', 26, 34),
+    new Cinderella('Lesja', 30, 34.5),
+    new Cinderella('Alla', 27, 35.5),
+    new Cinderella('lena', 24, 36.5),
+    new Cinderella('Julia', 20, 37.5)
+]
+
+let alfonso = new Prince('alfonso', 30, 36)
+alfonso.choiceCindarella(cindarellas)
 
 
 
-// class Cinderella{
-//     constructor(name, age, footSize){
-//         this.name = name;
-//         this.age = age;
-//         this.footSize = footSize
-//     }
-// }
 
-// class Prince{
-//     constructor(name, age, slipperSize){
-//         this.name = name;
-//         this.age = age;
-//         this.slipperSize = slipperSize
-
-//     }
-// }
-
-// let alfonso = new Prince('alfonso', 30, 36)
-
-// let Anja = new Cinderella('Anja', 25, 39)
-// cindarellas.push(Anja)
-// let Olja = new Cinderella('Olja', 22, 38)
-// cindarellas.push(Olja)
-// let Nastja = new Cinderella('Nastja', 21, 38)
-// cindarellas.push(Olja)
-// let Ira = new Cinderella('Ira', 18, 40)
-// cindarellas.push(Nastja)
-// let Oksana = new Cinderella('Oksana', 23, 36)
-// cindarellas.push(Oksana)
-// let Nadja = new Cinderella('Nadja', 26, 34)
-// cindarellas.push(Nadja)
-// let Lesja = new Cinderella('Lesja', 30, 34.5)
-// cindarellas.push(Lesja)
-// let Alla = new Cinderella('Alla', 27, 35.5)
-// cindarellas.push(Alla)
-// let Lena = new Cinderella('lena', 24, 36.5)
-// cindarellas.push(Lena)
-// let Julia = new Cinderella('Julia', 20, 37.5)
-// cindarellas.push(Julia)
-// console.log(cindarellas);
-
-// for (const cindarella of cindarellas) {
-    
-//     if (cindarella.footSize === alfonso.slipperSize) {
-//         console.log(`My sindarella is ${cindarella.name}`);
-//     }
-// }
 
 //     ===
 //     === === === === === === === === === === === === === === = -===================================================
