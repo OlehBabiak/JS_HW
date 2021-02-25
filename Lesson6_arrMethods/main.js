@@ -121,25 +121,43 @@ let arrWords = ['собака', 'кіт', 'морж', 'вихухоль', 'кі�
 //==========================================================================
 //     пройтись по ньому та додати кожному юзеру поле id - яке характеризує унікальний індентифікатор
 
-let newUserArr = users.map((user, id) => {
-    let newUser = user
-    user.id = id
-    return newUser
-})
+// let newUserArr = users.map((user, id) => {
+//     let newUser = user
+//     user.id = id
+//     return newUser
+// })
 // console.log(users);
 // console.log(newUserArr);
 
-const usersWithId = users.map((user, index) => {  //????????????????????????/
-	let newUser = {...user};
-	newUser.id = index + 1;
-	return newUser;
-});
-console.log(users);
-console.log(usersWithId);
+// const usersWithId = users.map((user, index) => {  //????????????????????????/
+// 	let newUser = {...user};
+// 	newUser.id = index + 1;
+// 	return newUser;
+// });
+// console.log(users);
+// console.log(usersWithId);
 //(По якому принципу його створювати - ваше рішення), та зберегти це в новий масив(первинний масив залишиться без змін) -
 //     відсортувати його за індентифікатором
 
 
-newUserArr.sort((newUser1, newUser2) => newUser2.id - newUser1.id)
-console.log(newUserArr);
+// newUserArr.sort((newUser1, newUser2) => newUser2.id - newUser1.id)
+// console.log(newUserArr);
 
+
+// --наисать функцию калькулятора с 2 мя числами и колбеком
+// --наисать функцию калькулятора с 3 мя числами и колбеком
+
+// function calc(a, b, callback) {
+//     return callback(a, b)
+// }
+
+// console.log(calc(265, 387, (a, b) => 
+//     a + b * a))
+
+
+    // function calc(a, b, c, callback) {
+    //     return callback(a, b, c)
+    // }
+
+    // console.log(calc(265, 387, 58, (a, b, c) =>
+    //     a + b * c))
