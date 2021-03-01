@@ -1,0 +1,13 @@
+#text{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+.remove{
+    display: none;
+}
+
+.com_div{
+    margin: 5px;
+    border: 1px solid black;
+}
