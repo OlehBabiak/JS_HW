@@ -116,24 +116,33 @@ let comments = [{
 // кинути алерт з попередженням.
 // Перевірку робити при натисканні на кнопку
 
-let someBadWords = ['качка', 'півень', 'гусак', 'вовк', 'кіт', 'пес', 'голуб', 'сорока']
+// let someBadWords = ['качка', 'півень', 'гусак', 'вовк', 'кіт', 'пес', 'голуб', 'сорока']
 
-let checkDiv = document.createElement('div')
-let h3 = document.createElement('h3')
-h3.innerText = 'Check the word'
-checkDiv.appendChild(h3)
-document.body.appendChild(checkDiv)
-let inputWord = document.createElement('input')
-checkDiv.appendChild(inputWord)
-let buttonCheck = document.createElement('button')
-buttonCheck.innerHTML = 'Check'
-checkDiv.appendChild(buttonCheck)
-
-
+// let checkDiv = document.createElement('div')
+// let h3 = document.createElement('h3')
+// h3.innerText = 'Check the word'
+// checkDiv.appendChild(h3)
+// document.body.appendChild(checkDiv)
+// let inputWord = document.createElement('input')
+// checkDiv.appendChild(inputWord)
+// let buttonCheck = document.createElement('button')
+// buttonCheck.innerHTML = 'Check'
+// checkDiv.appendChild(buttonCheck)
 
 
-buttonCheck.addEventListener('click', function () {
-            alert((someBadWords.includes(inputWord.value)) ? 'Хуйове слово' : 'Молодець')
+
+
+// buttonCheck.addEventListener('click', function () {
+//             alert((someBadWords.includes(inputWord.value)) ? 'Хуйове слово' : 'Молодець')
                   
-              })
-            
+//               })
+// let input = document.createElement('input')
+// document.body.appendChild(input)
+// let div = document.createElement('div')
+// document.body.appendChild(div)
+// input.oninput = function () {
+//    div.innerText = this.value
+// }
+      
+//============================================
+
