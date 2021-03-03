@@ -1,6 +1,5 @@
 let input = document.createElement('input')
 input.placeholder = 'enter item'
-input.id = '#txt'
 document.body.appendChild(input)
 
 let btn = document.createElement('button')
