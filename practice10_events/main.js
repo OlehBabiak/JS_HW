@@ -33,7 +33,7 @@
 //     (Додатковачастина для завдання)
 
 let btn = document.getElementsByClassName('button')[0]
-let tableData = document.forms.table
+// let tableData = document.forms.table
 
 
 btn.addEventListener('click', function () {
