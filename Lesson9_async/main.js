@@ -29,23 +29,24 @@
 let greet = document.createElement('h1')
 document.body.appendChild(greet)
 
-   let promise =  new Promise((resolve, reject) => {
+function print() {
+    let promise = new Promise((resolve, reject) => {
             setTimeout(() => {
                 let p = document.createElement('h')
                 p.innerText = 'H'
                 greet.appendChild(p)
                 resolve()
-            }, Math.random() * 1000);
-            
+            }, delay = Math.random() * 1000);
+
         })
         .then(() => {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                  let p = document.createElement('h')
-                  p.innerText = 'e'
-                  greet.appendChild(p)
-                  resolve()
-                }, Math.random() * 1000);
+                    let p = document.createElement('h')
+                    p.innerText = 'e'
+                    greet.appendChild(p)
+                    resolve()
+                }, delay = Math.random() * 1000);
             });
         })
         .then(() => {
@@ -55,7 +56,7 @@ document.body.appendChild(greet)
                     p.innerText = 'l'
                     greet.appendChild(p)
                     resolve()
-                }, Math.random() * 1000);
+                }, delay = Math.random() * 1000);
             });
         })
         .then(() => {
@@ -65,7 +66,7 @@ document.body.appendChild(greet)
                     p.innerText = 'l'
                     greet.appendChild(p)
                     resolve()
-                }, Math.random() * 1000);
+                }, delay);
             });
         })
         .then(() => {
@@ -75,7 +76,7 @@ document.body.appendChild(greet)
                     p.innerText = 'o'
                     greet.appendChild(p)
                     resolve()
-                }, Math.random() * 1000);
+                }, delay = Math.random() * 1000);
             });
         })
         .then(() => {
@@ -85,7 +86,7 @@ document.body.appendChild(greet)
                     p.innerText = ' '
                     greet.appendChild(p)
                     resolve()
-                }, Math.random() * 1000);
+                }, delay = Math.random() * 1000);
             });
         })
         .then(() => {
@@ -95,7 +96,7 @@ document.body.appendChild(greet)
                     p.innerText = 'w'
                     greet.appendChild(p)
                     resolve()
-                }, Math.random() * 1000);
+                }, delay = Math.random() * 1000);
             });
         })
         .then(() => {
@@ -105,7 +106,7 @@ document.body.appendChild(greet)
                     p.innerText = 'o'
                     greet.appendChild(p)
                     resolve()
-                }, Math.random() * 1000);
+                }, delay = Math.random() * 1000);
             });
         })
         .then(() => {
@@ -115,7 +116,7 @@ document.body.appendChild(greet)
                     p.innerText = 'r'
                     greet.appendChild(p)
                     resolve()
-                }, Math.random() * 1000);
+                }, delay = Math.random() * 1000);
             });
         })
         .then(() => {
@@ -125,7 +126,7 @@ document.body.appendChild(greet)
                     p.innerText = 'l'
                     greet.appendChild(p)
                     resolve()
-                }, Math.random() * 1000);
+                }, delay = Math.random() * 1000);
             });
         })
         .then(() => {
@@ -135,10 +136,12 @@ document.body.appendChild(greet)
                     p.innerText = 'd'
                     greet.appendChild(p)
                     resolve()
-                }, Math.random() * 1000);
+                }, delay = Math.random() * 1000);
             });
         })
-
+}
+   
+print()
 
 
 
