@@ -26,142 +26,39 @@
 // l(затримка 0.3)
 // l(затримка 0.7)
 // о(затримка 1)
-let greet = document.createElement('h1')
-document.body.appendChild(greet)
 
-function print() {
-    let promise = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                let p = document.createElement('h')
-                p.innerText = 'H'
-                greet.appendChild(p)
-                resolve()
-            }, delay = Math.random() * 1000);
 
-        })
-        .then(() => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    let p = document.createElement('h')
-                    p.innerText = 'e'
-                    greet.appendChild(p)
-                    resolve()
-                }, delay = Math.random() * 1000);
-            });
-        })
-        .then(() => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    let p = document.createElement('h')
-                    p.innerText = 'l'
-                    greet.appendChild(p)
-                    resolve()
-                }, delay = Math.random() * 1000);
-            });
-        })
-        .then(() => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    let p = document.createElement('h')
-                    p.innerText = 'l'
-                    greet.appendChild(p)
-                    resolve()
-                }, delay);
-            });
-        })
-        .then(() => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    let p = document.createElement('h')
-                    p.innerText = 'o'
-                    greet.appendChild(p)
-                    resolve()
-                }, delay = Math.random() * 1000);
-            });
-        })
-        .then(() => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    let p = document.createElement('h')
-                    p.innerText = ' '
-                    greet.appendChild(p)
-                    resolve()
-                }, delay = Math.random() * 1000);
-            });
-        })
-        .then(() => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    let p = document.createElement('h')
-                    p.innerText = 'w'
-                    greet.appendChild(p)
-                    resolve()
-                }, delay = Math.random() * 1000);
-            });
-        })
-        .then(() => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    let p = document.createElement('h')
-                    p.innerText = 'o'
-                    greet.appendChild(p)
-                    resolve()
-                }, delay = Math.random() * 1000);
-            });
-        })
-        .then(() => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    let p = document.createElement('h')
-                    p.innerText = 'r'
-                    greet.appendChild(p)
-                    resolve()
-                }, delay = Math.random() * 1000);
-            });
-        })
-        .then(() => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    let p = document.createElement('h')
-                    p.innerText = 'l'
-                    greet.appendChild(p)
-                    resolve()
-                }, delay = Math.random() * 1000);
-            });
-        })
-        .then(() => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    let p = document.createElement('h')
-                    p.innerText = 'd'
-                    greet.appendChild(p)
-                    resolve()
-                }, delay = Math.random() * 1000);
-            });
-        })
+
+
+const text = 'Hello world!'
+let arr2 = text.split('')
+
+  let count = 0;
+  let string = '';
+ 
+  function typeLine(cb) {
+    let interval = setTimeout(
+      () => {
+        string += text[count]
+        console.log(string);
+        document.querySelector('pre').innerHTML =string +'|';
+
+      count++;
+      console.log(count);
+
+        if (count == text.length) {
+          clearTimeout(interval);
+           document.querySelector('pre').innerHTML =string;
+          return true;
+        }
+      
+      typeLine(delayInt);
+    }, cb(600))
+  }
+
+  typeLine(delayInt);
+
+function delayInt(delay) {
+  return Math.floor(Math.random() * delay);
 }
-   
-print()
 
-
-
-// let money = 0
-// function clearHouse(isJobDone, cb) {
-//    setTimeout(() => {
-//         if (isJobDone) {
-//             money = 500;
-//             cb(null, money)
-//         } else {
-//             cb('Ooops, I did it again!', null)
-//         }
-//    }, 2000);
-// }
-
-// clearHouse(true, (err, party)=> {
-//     if (err) {
-//         document.write(err)
-//     } else {
-//         document.write('I stay racher for ' + party)
-//     }
-// })
-// console.log(money);
