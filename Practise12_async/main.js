@@ -1,5 +1,3 @@
-console.log('Request data...');
-
 // setTimeout(() => {
 //     console.log('Preparing data');
 
@@ -49,25 +47,55 @@ console.log('Request data...');
 // .catch(err => console.error('Error', err))
 // .finally(() => console.log('Finally'))
 
-const sleep = ms => {
-    return new Promise(function (resolve) {
-        setTimeout(() => {
-        console.log('alalalala');
-        resolve('this action is ')
-        }, ms)
-    })
-        
+// const sleep = ms => {
+//     return new Promise(function (resolve) {
+//         setTimeout(() => {
+//         console.log('alalalala');
+//         resolve('this action is ')
+//         }, ms)
+//     })
+
+// }
+
+// sleep(2000).then((msg)=> console.log(msg + 'after 2s'))
+// sleep(3000).then((msg) => console.log(msg + 'after 3s'))
+
+// Promise.all([sleep(2000), sleep(3000)])
+// .then(()=> {
+//     console.log('All promisee');
+// })
+
+// Promise.race([sleep(2000), sleep(3000)])
+//     .then(() => {
+//         console.log('Race promisee');
+//     })
+
+const text = 'Hello, world!'
+
+
+let h1 = document.createElement('h1')
+document.body.appendChild(h1)
+let text1 = []
+
+
+
+const typeWriter = async (str) => {
+    for (let ch of str) {
+       await writeCh(ch)
+
+    }
 }
 
-sleep(2000).then((msg)=> console.log(msg + 'after 2s'))
-sleep(3000).then((msg) => console.log(msg + 'after 3s'))
-
-Promise.all([sleep(2000), sleep(3000)])
-.then(()=> {
-    console.log('All promisee');
-})
-
-Promise.race([sleep(2000), sleep(3000)])
-    .then(() => {
-        console.log('Race promisee');
+const writeCh = function (ch) {
+    return new Promise(resolve =>
+        setTimeout(() => {
+            resolve(text1.push(ch))
+        }, Math.random() * 1000)
+    )
+    .then((value) => {
+        h1.innerText = text1.join('')
     })
+}
+
+typeWriter(text)
+
