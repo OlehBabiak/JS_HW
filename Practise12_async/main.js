@@ -76,6 +76,7 @@ const text = 'Hello, world!'
 let h1 = document.createElement('h1')
 document.body.appendChild(h1)
 let text1 = []
+let counter = 0
 
 
 
@@ -89,11 +90,15 @@ const typeWriter = async (str) => {
 const writeCh = function (ch) {
     return new Promise(resolve =>
         setTimeout(() => {
-            resolve(text1.push(ch))
+            resolve(text1.push(ch), counter++)
         }, Math.random() * 1000)
     )
     .then((value) => {
+    if (counter < text.length) {
+        h1.innerText = text1.join('') + '|'
+    }else{
         h1.innerText = text1.join('')
+    }   
     })
 }
 
